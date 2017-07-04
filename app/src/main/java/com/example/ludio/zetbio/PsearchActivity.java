@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 
 /**
+ * Ludio Lee JH
  * Created by Ludio on 2017-06-02.
  */
 
@@ -28,9 +29,22 @@ public class PsearchActivity extends AppCompatActivity {
 
         initialize();
 
-        recentSearchButton.setOnClickListener(new recentSearchListener());
-        patientInterestLayout.setOnClickListener(new patientInterestListener());
+        recentSearchLayout.setVisibility(View.VISIBLE);
+        patientInterestLayout.setVisibility(View.GONE);
 
+        patientInterestButton.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                changeView(1);
+            }
+        });
+
+        recentSearchButton.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                changeView(0);
+            }
+        });
     }
 
     private void initialize() {
@@ -40,35 +54,25 @@ public class PsearchActivity extends AppCompatActivity {
         recentSearchLayout = (LinearLayout) findViewById(R.id.recentsearch_layout);
         patientInterestLayout = (LinearLayout) findViewById(R.id.patient_interest_layout);
 
-        recentSearchLayout.setVisibility(View.VISIBLE);
-        patientInterestLayout.setVisibility(View.GONE);
     }
 
-    private class recentSearchListener implements View.OnClickListener {
-        @Override
-        public void onClick(View view) {
-            if (recentSearchLayout.getVisibility() == View.GONE) {
-                recentSearchButton.setBackgroundColor(Color.rgb(204, 204, 204));
-                patientInterestButton.setBackgroundColor(Color.rgb(102, 102, 102));
+    private void changeView(int index) {
+        switch(index) {
+            case 0:
+                recentSearchButton.setBackgroundResource(R.drawable.shape_button_search);
+                patientInterestButton.setBackgroundResource(R.drawable.shape_button_searchd);
 
                 recentSearchLayout.setVisibility(View.VISIBLE);
                 patientInterestLayout.setVisibility(View.GONE);
-            }
 
-        }
-    }
-
-    private class patientInterestListener implements View.OnClickListener {
-        @Override
-        public void onClick(View view) {
-            if (patientInterestLayout.getVisibility() == View.GONE) {
-                recentSearchButton.setBackgroundColor(Color.rgb(102, 102, 102));
-                patientInterestButton.setBackgroundColor(Color.rgb(204, 204, 204));
+            case 1:
+                recentSearchButton.setBackgroundResource(R.drawable.shape_button_searchd);
+                patientInterestButton.setBackgroundResource(R.drawable.shape_button_search);
 
                 recentSearchLayout.setVisibility(View.GONE);
                 patientInterestLayout.setVisibility(View.VISIBLE);
-            }
         }
+
     }
 
 }
