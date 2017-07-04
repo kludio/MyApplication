@@ -18,13 +18,13 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".Splashscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <!--Splash-->
-        <activity
-            android:name=".SplashActivity"
-            android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar" />
-
 
         <!--Information List-->
         <activity android:name=".MainViewActivity" />
