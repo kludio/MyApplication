@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        startActivity(new Intent(this, SplashActivity.class));
+        startActivity(new Intent(this, Splashscreen.class));
         setContentView(R.layout.login_view);
         initialize();
         loginButton.setOnClickListener(new LoginButtonListener());
