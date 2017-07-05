@@ -27,7 +27,7 @@ public class MainViewActivity extends AppCompatActivity {
 
         testResultView.setOnClickListener(new testResultListener());
         setUpView.setOnClickListener(new setUpListener());
-
+        informationView.setOnClickListener(new informationListener());
 
     }
 
@@ -38,7 +38,7 @@ public class MainViewActivity extends AppCompatActivity {
         setUpView = (LinearLayout) findViewById(R.id.set_Up);
     }
 
-    private class testResultListener implements View.OnClickListener{
+    private class testResultListener implements View.OnClickListener {
         @Override
         public void onClick(View view) {
             Intent intent = new Intent(MainViewActivity.this, PsearchActivity.class);
@@ -46,10 +46,18 @@ public class MainViewActivity extends AppCompatActivity {
         }
     }
 
-    private class setUpListener implements View.OnClickListener{
+    private class setUpListener implements View.OnClickListener {
         @Override
         public void onClick(View view) {
             Intent intent = new Intent(MainViewActivity.this, SetUpActivity.class);
+            MainViewActivity.this.startActivity(intent);
+        }
+    }
+
+    private class informationListener implements View.OnClickListener {
+        @Override
+        public void onClick(View view) {
+            Intent intent = new Intent(MainViewActivity.this, Earthinformation.class);
             MainViewActivity.this.startActivity(intent);
         }
     }

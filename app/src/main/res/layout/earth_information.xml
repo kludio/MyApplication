@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:id="@+id/choice"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true">
+
+        <Button
+            android:id="@+id/country_search_button"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="0.96"
+            android:background="@drawable/shape_button_search"
+            android:text="국가"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/continent_search_button"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_button_searchd"
+            android:text="대륙"
+            android:textSize="30dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/country_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/choice"
+        android:background="@color/lightgray"
+        android:orientation="vertical"
+        android:paddingBottom="15dp"
+        android:paddingEnd="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingStart="15dp"
+        android:paddingTop="20dp">
+
+        <LinearLayout
+            android:id="@+id/korea_layout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/lightgray"
+            android:longClickable="false"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/korea_textView"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="대한민국"
+                android:textColor="@color/black"
+                android:textSize="35dp" />
+
+            <ImageView
+                android:id="@+id/line1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/line" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Germany_layout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/lightgray"
+
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/germany_textview"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginTop="2dp"
+                android:gravity="center"
+                android:text="독일"
+                android:textColor="@color/black"
+                android:textSize="35dp" />
+
+            <ImageView
+                android:id="@+id/line2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/line" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/USA_layout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/lightgray"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/usa_textview"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="미국"
+                android:textColor="@color/black"
+                android:textSize="35dp" />
+
+            <ImageView
+                android:id="@+id/line3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/line" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/China_layout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/lightgray"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/china_textView"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="중국"
+                android:textColor="@color/black"
+                android:textSize="35dp" />
+
+            <ImageView
+                android:id="@+id/line4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/line" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Japan_layout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/lightgray"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/japan_textview"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="일본"
+                android:textColor="@color/black"
+                android:textSize="35dp" />
+
+            <ImageView
+                android:id="@+id/line5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/line" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

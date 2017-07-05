@@ -40,6 +40,10 @@
 
         <activity android:name=".FindIdPasswordActivity" />
 
+        <activity android:name=".Earthinformation" />
+
+        <activity android:name=".CountryInformationActivity" />
+
     </application>
 
 </manifest>
