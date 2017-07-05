@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Layout;
 import android.view.View;
 import android.widget.LinearLayout;
 
@@ -27,7 +26,7 @@ public class MainViewActivity extends AppCompatActivity {
 
         testResultView.setOnClickListener(new testResultListener());
         setUpView.setOnClickListener(new setUpListener());
-
+        informationView.setOnClickListener(new C_informationView());
 
     }
 
@@ -50,6 +49,14 @@ public class MainViewActivity extends AppCompatActivity {
         @Override
         public void onClick(View view) {
             Intent intent = new Intent(MainViewActivity.this, SetUpActivity.class);
+            MainViewActivity.this.startActivity(intent);
+        }
+    }
+
+    private class C_informationView implements View.OnClickListener{
+        @Override
+        public void onClick(View view) {
+            Intent intent = new Intent(MainViewActivity.this, FindInformation.class);
             MainViewActivity.this.startActivity(intent);
         }
     }

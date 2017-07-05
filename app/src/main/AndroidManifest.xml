@@ -28,7 +28,8 @@
 
         <!--Information List-->
         <activity android:name=".MainViewActivity" />
-
+        
+        <activity android:name=".FindInformation" />
         <!--SignUp Page-->
         <activity android:name=".SignUpActivity" />
 
