@@ -2,10 +2,13 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
+    <color name="blue">#0000FF</color>
+    <color name="orange">#FF9900</color>
     <color name="colorAccent">#FF4081</color>
     <color name="zbio_blue">#2389c6</color>
     <color name="white">#ffffff</color>
     <color name="lightgray">#CCCCCC</color>
+    <color name="mlightgray">#DDDDDD</color>
     <color name="darkgray">#666666</color>
     <color name="red">#c1272d</color>
     <color name="black">#000000</color>
