@@ -61,16 +61,16 @@ public class PsearchActivity extends AppCompatActivity {
             case 0:
                 recentSearchButton.setBackgroundResource(R.drawable.shape_button_search);
                 patientInterestButton.setBackgroundResource(R.drawable.shape_button_searchd);
-
                 recentSearchLayout.setVisibility(View.VISIBLE);
                 patientInterestLayout.setVisibility(View.GONE);
+                break;
 
             case 1:
                 recentSearchButton.setBackgroundResource(R.drawable.shape_button_searchd);
                 patientInterestButton.setBackgroundResource(R.drawable.shape_button_search);
-
                 recentSearchLayout.setVisibility(View.GONE);
                 patientInterestLayout.setVisibility(View.VISIBLE);
+                break;
         }
 
     }
